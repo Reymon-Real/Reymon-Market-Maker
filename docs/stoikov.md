@@ -5,15 +5,15 @@ Den fairen Preis anhand der Formel `Mikropreis = M + G` schätzen
 # Aufschlüsselung der Grundformel
 
 $$
-M = \frac{bid_price + ask_price}{2}
+M = \frac{bid price + ask price}{2}
 $$
 
 $$
-S = ask_price − bid_price
+S = ask price − bid price
 $$
 
 $$
-I = \frac{bid_size}{bid_size + bid_ask}
+I = \frac{bid size}{bid size + ask_size}
 $$
 
 $$
