@@ -12,6 +12,7 @@ $$
 S = ask_price − bid_price
 $$
 
+$$
 I = \frac{bid_size}{bid_size + bid_ask}
 $$
 
