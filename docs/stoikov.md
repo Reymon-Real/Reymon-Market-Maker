@@ -17,7 +17,7 @@ I = \frac{bid_size}{bid_size + bid_ask}
 $$
 
 $$
-G = \left(I − 0.5\rigth) \cdot S
+G = \left(I − 0.5\right) \cdot S
 $$
 
 $$
