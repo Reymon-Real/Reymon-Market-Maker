@@ -27,5 +27,5 @@ $$
 # Formel Avellaneda–Stoikov
 
 $$
-\delta^{pm} = \frac{\gamma \sigma^2 q){2} + \frac{1}{\gamma} \cdot \ln\!\left(1 + \frac{\gamma}{\kappa}\right)
+\delta^{pm} = \frac{\gamma \sigma^2 q){2} + \frac{1}{\gamma} \cdot \ln\!\left1 + \frac{\gamma}{\kappa}\right
 $$
