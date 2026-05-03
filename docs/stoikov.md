@@ -8,8 +8,17 @@ Den fairen Preis anhand der Formel `Mikropreis = M + G` schätzen
 
 $$
 bid-price = bid^p
+$$
+
+$$
 ask-price = ask^p
+$$
+
+$$
 bid-size  = bid^s
+$$
+
+$$
 bid-size  = ask^s
 $$
 
