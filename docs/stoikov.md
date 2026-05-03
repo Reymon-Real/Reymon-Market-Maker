@@ -8,6 +8,7 @@ $$
 M = \frac{bid_price + ask_price}{2}
 $$
 
+$$
 S = ask_price − bid_price
 $$
 
