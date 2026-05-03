@@ -47,6 +47,9 @@ $$
 # Formel Avellaneda–Stoikov
 
 $$
-\delta^{\plus} = \frac{\gamma \sigma^2 q}{2} + \frac{1}{\gamma} \cdot \ln\!\left(1 + \frac{\gamma}{\kappa}\right)
-\delta^{\minus} = \frac{\gamma \sigma^2 q}{2} + \frac{1}{\gamma} \cdot \ln\!\left(1 + \frac{\gamma}{\kappa}\right)
+\delta^{\+} = \frac{\gamma \sigma^2 q}{2} + \frac{1}{\gamma} \cdot \ln\!\left(1 + \frac{\gamma}{\kappa}\right)
+$$
+
+$$
+\delta^{\-} = \frac{\gamma \sigma^2 q}{2} + \frac{1}{\gamma} \cdot \ln\!\left(1 + \frac{\gamma}{\kappa}\right)
 $$
