@@ -18,7 +18,5 @@ bibliothek_hilfsfunktionen = shared_library(
 	dependencies: dependencies,
 	include_directories: directories,
 
-	link_args: [ '-lm' ],
-
 	install: true
 )

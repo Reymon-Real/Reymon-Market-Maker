@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pthread.h>
 #include <yyjson.h>
 #include <pzh/pzhmm/pzhmm.h>
 
@@ -45,11 +46,21 @@ int main(void) {
 
 	PZHNormalisieren(exchange); // Format normalisieren
 
-	if (strcmp(exchange, "BINANCE") == 0)
-		binance_verbinden();
+	// *****************************
+	// *** Erstellen von Threads ***
+	// *****************************
+
+	for (size_t i = 0; i < threads; i++) {
+
+		if (strcmp(exchange, "BINANCE") == 0)
+			binance_verbinden();
 	
-	else if (strcmp(exchange, "KRAKEN") == 0)
-		kraken_verbinden();
+		else if (strcmp(exchange, "KRAKEN") == 0)
+			kraken_verbinden();
+
+		else if (strcmp(exchange, "NOTHING") == 0)
+			break;
+	}
 
 	return EXIT_SUCCESS;
 }

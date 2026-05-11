@@ -25,8 +25,6 @@ bibliothek_borse_binance = shared_library(
 	dependencies: dependencies,
 	include_directories: directories,
 
-	link_args: [ '-lm' ],
-
 	install: true
 )
 
@@ -46,8 +44,6 @@ bibliothek_borse_kraken = shared_library(
 
 	dependencies: dependencies,
 	include_directories: directories,
-
-	link_args: [ '-lm' ],
 
 	install: true
 )

@@ -31,6 +31,14 @@ add_project_arguments(
 
 endif
 
+add_project_link_arguments(
+	
+	'-lm',
+	'-lpthread',
+
+	language: 'c'
+)
+
 # ****************
 # *** Programs ***
 # ****************
@@ -90,8 +98,6 @@ reymm_exe = executable(
 	link_with: libraries,
 	dependencies : dependencies,
 	include_directories: directories,
-
-	link_args: [ '-lm' ],
 
 	install: true
 )

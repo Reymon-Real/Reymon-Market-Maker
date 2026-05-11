@@ -17,7 +17,5 @@ bibliothek_risiko = static_library(
 	dependencies: dependencies,
 	include_directories: directories,
 
-	link_args: [ '-lm' ],
-
 	install: false
 )
