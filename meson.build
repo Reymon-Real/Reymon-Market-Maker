@@ -1,11 +1,10 @@
 project(
-	'reymm',
-	'c', 'cpp',
+	'PZH Market-Maker',
+	'c',
 	meson_version : '>=1.9.0',
 	version : '0.1',
 	default_options : [
 		'c_std=gnu23',
-		'cpp_std=gnu++23',
 		'warning_level=3',
 		'buildtype=debug',
 		'strip=true'
@@ -20,14 +19,14 @@ if get_option('buildtype') == 'debug'
 
 add_project_arguments(
 	'-DREYMM_DEMO=1',
-	language: [ 'c', 'cpp' ]
+	language: 'c'
 )
 
 else
 
 add_project_arguments(
 	'-DREYMM_RELEASE=1',
-	language: [ 'c', 'cpp' ]
+	language: 'c'
 )
 
 endif
@@ -42,12 +41,14 @@ gdb = find_program('gdb')
 # *** Dependencies ***
 # ********************
 
+curl       = dependency('libcurl')
 json       = dependency('yyjson')
 crypto     = dependency('libcrypto')
 openssl    = dependency('openssl')
 websockets = dependency('libwebsockets')
 
 dependencies = [
+	curl,
 	json,
 	crypto,
 	openssl,
@@ -67,17 +68,14 @@ directories = include_directories(
 # *** Subdirectories ***
 # **********************
 
-subdir('src/utilities')
-
-subdir('src/kern')
-subdir('src/risk')
-subdir('src/connect')
+subdir('src/hilfs')
+subdir('src/risiko')
+subdir('src/börse')
 
 libraries = [
-	libreymm_utilities,
-	libreymm_risk,
-	libreymm_connect_binance,
-	libreymm_connect_kraken
+	bibliothek_hilfsfunktionen,
+	bibliothek_risiko,
+	bibliothek_borsen
 ]
 
 # *******************
@@ -85,9 +83,9 @@ libraries = [
 # *******************
 
 reymm_exe = executable(
-	'reymm',
+	'pzhmm',
 	
-	FILES_KERN,
+	'src/kern.c',
 
 	link_with: libraries,
 	dependencies : dependencies,

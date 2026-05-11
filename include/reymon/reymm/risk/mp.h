@@ -24,7 +24,7 @@ extern "C" {
 
 #define REYMM_SIGMA_WINDOW  100
 #define REYMM_KAPPA_WINDOW  50
-#define REYMM_VOLUME_WINDOW 86400
+#define REYMM_VOLUME_WINDOW 100
 
 // ***************
 // *** Aliases ***
@@ -42,7 +42,7 @@ typedef struct {
 
 	size_t idx;
 	size_t count;
-	double midprice[REYMM_VOLUME_WINDOW];
+	double midprice[REYMM_SIGMA_WINDOW];
 
 } reymm_sigma_t;
 
@@ -66,14 +66,22 @@ typedef struct {
 	
 	reymm_kappa_t kappa; // frecuencia de ticks del book (órdenes/segundo)
 	reymm_sigma_t sigma; // volatilidad
-	
-	double inventory; // inventario actual
+
+	double sigma_value; // Precalculate Sigma
+	double kappa_value; // Precalculate Kappa	
+	double inventory;   // inventario actual
 
 	time_t exchange_time; // timestamp del exchange en milisegundos
 	time_t session_open;  // inicio de sesión en milisegundos
 	time_t session_close; // cierre de sesión en milisegundos
 
 } reymm_stoikov;
+
+// *****************
+// *** Variables ***
+// *****************
+
+extern reymm_stoikov stoikov;
 
 // *****************
 // *** Functions ***

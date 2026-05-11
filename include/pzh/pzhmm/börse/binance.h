@@ -1,12 +1,12 @@
-// **************************
-// *** Author: Reymon Dev ***
-// *** Date: 1 Mai 2026   ***
-// *** Update: 1 Mai 2026 ***
-// *** License: MIT       ***
-// **************************
+// *********************************
+// *** Author: PZH Geselleschaft ***
+// *** Date: 9 Mai 2026          ***
+// *** Update: 9 Mai 2026        ***
+// *** License: AGPL-3-or-later  ***
+// *********************************
 
-#ifndef REYMON_REYMM_CONNECT_BINANCE_H
-#define REYMON_REYMM_CONNECT_BINANCE_H
+#ifndef PZH_PZHMM_BÖRSE_BINANCE_H
+#define PZH_PZHMM_BÖRSE_BINANCE_H
 #if defined(__cplusplus)
 extern "C" {
 #endif
@@ -16,8 +16,6 @@ extern "C" {
 // *****************
 
 #include <stdint.h>
-
-#include "connect.h"
 #include <yyjson.h>
 #include <libwebsockets.h>
 
@@ -93,11 +91,11 @@ typedef struct {
 // *** Functions ***
 // *****************
 
-extern void websocket_concat(char (*)[], char (*)[], size_t);
+extern void    websocket_concat(char (*)[], char (*)[], size_t);
 extern int64_t binance_get_timestamp_ms();
-extern char* binance_payload(binance_order* order, bnb_ms);
+extern char*   binance_payload(binance_order* order, bnb_ms);
 
 #if defined(__cplusplus)
 }
 #endif
-#endif // REYMON_REYMM_CONNECT_BINANCE_H
+#endif // PZH_PZHMM_BÖRSE_BINANCE_H

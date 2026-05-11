@@ -66,8 +66,6 @@ typedef struct {
 	char* apikey;
 	char* apisecret;
 
-	bool exit;
-
 } reymm_setting;
 
 // ***********************
