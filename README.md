@@ -17,20 +17,36 @@ These are the exchanges that the bot officially supports
 3. openssl
 4. libwebsockets
 
-# Json Format
+# Setting Format
 
 ```json
-{
-	"exchange":  "",  // Exchange (el nombre es insensible)
-	"symbol":    "",  // Símbol donde se va a operar (el nombre es sensible)
-	"ordertype": "",  // Tipo de orden (el nombre es sensible)
-	
-	"bid":  0,    // Cantidad de órdenes en bid (nunca supera al méximo del exchange)
-	"ask":  0,    // Cantidad de órdenes en ask (nunca supera al máximo del exchange)
-	"size": 0,    // Tamaño de las órdenes
-	"gamma": 0.1, // Aversión al riesgo
+{	
+	"exchange": [ // List of the exchanges to operate
+		"binance",
+		"kraken"
+	],
 
-	"apikey":    "", // API Key
-	"apisecret": ""  // API Secret
+	"threads": 2 // The number of threads indicates the number of exchanges on which trading will take place
+}
+```
+
+# Exchange Format
+
+```json
+{	
+	"symbol": "", // Symbol to operate
+
+	"bid":   10,  // Limit of orders on bid
+	"ask":   10,  // Limit of orders on ask
+	"size":  10,  // Size of the orders
+	"limit": 700, // Inventory limit
+	
+	"gamma": 0.1, // Risk Aversion
+	
+	"apikey":    "", // Public Apikey
+	"apisecret": "", // Secret Apikey
+
+	"exit": false,       // If true, exit of the program
+	"keep_orders": false // If this is true, it does not cancel the orders if the symbol is changed
 }
 ```
